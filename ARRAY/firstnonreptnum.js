@@ -72,10 +72,57 @@
 // ================================================================
 // square of array
 
-let nums = [1, 2, 3, 4]
-let newNums = []
-for (let i = 0; i < nums.length; i++) {
-    newNums.push(nums[i]**2)
+// let nums = [1, 2, 3, 4]
+// let newNums = []
+// for (let i = 0; i < nums.length; i++) {
+//     newNums.push(nums[i]**2)
     
+// }
+// console.log(newNums);
+
+
+
+
+// =================================================================
+// remove false value
+
+// let nums = [1, '', false, true, 'subham', null, undefined];
+
+// let truthValue = nums.filter(Boolean);
+
+// console.log(truthValue);
+
+
+// let arr = [1, 2, 3, 4];
+// let str = "1,2,3";
+// console.log(arr == str);
+
+
+
+
+
+
+
+// ================================================================
+// shorting alogiridoms
+
+// Linear search
+
+let nums = [10, 13, 69, 45, 36, 76]
+let target = 69;
+
+for(let i=0; i<nums.length; i++){
+    if(nums[i] === target){
+        console.log(true);
+    }
 }
-console.log(newNums);
+
+function findTarget(nums, target){
+    for(let i=0; i<nums.length; i++){
+        if(nums[i] === target){
+            return true;
+        }
+    }
+    return false;
+}
+console.log(findTarget(nums, target));
