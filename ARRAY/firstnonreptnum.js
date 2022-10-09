@@ -36,6 +36,15 @@
 
 
 
+// non repeatnig numbers (if don't use break it will print all non repeating numbers)
+
+// let nums = [1, 2, 1, 2, 1, 3, 4]
+// for(let i=0; i < nums.length; i++){
+//     if(nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])){
+//         console.log(nums[i]);
+//     }
+// }
+
 // =================================================================
 
 // Largest number
@@ -49,11 +58,24 @@
 // console.log(max);
 
 // Largest number (negative value)
-let nums = [-1, -20, -32, -17, -89, -10, -27, -100];
-let max = nums[0];
-for(let i=1; i<nums.length; i++){
-    if(max < nums[i]){
-        max = nums[i]
-    }
+// let nums = [-1, -20, -32, -17, -89, -10, -27, -100];
+// let max = nums[0];
+// for(let i=1; i<nums.length; i++){
+//     if(max < nums[i]){
+//         max = nums[i]
+//     }
+// }
+// console.log(max);
+
+
+
+// ================================================================
+// square of array
+
+let nums = [1, 2, 3, 4]
+let newNums = []
+for (let i = 0; i < nums.length; i++) {
+    newNums.push(nums[i]**2)
+    
 }
-console.log(max);
+console.log(newNums);
