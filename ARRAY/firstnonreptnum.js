@@ -8,7 +8,7 @@
 //         right.push(left[i])
 //     }
 // }
-
+// console.log(right);
 
 // ==============================================================
 
@@ -158,15 +158,53 @@
 
 
 //=================================================================
+// Anagram
+// let word1 = "god"
+// let word2 = "dog"
+// if(word1.split('').sort().join('') == word2.split('').sort().join('')){
+//     console.log("anagram");
+// }else{
+//     console.log("not an anagram");
+// }
+
 // Frequencey (how many times word is used)
 
-let words = 'hdsvgiuefgaugbvajkbvjkabeig';
-let target = 'd';
-let count = 0;
+// let words = 'hdsvgiu efgaugbva jkbvjkabeig';
+// let target = 'c';
+// let count = 0;
 
-for(let i=0; i<words.length; i++){
-    if(words[i] == target){
-        count++
-    }
-}
-console.log(count);
+// for(let i=0; i<words.length; i++){
+//     if(words[i] == target){
+//         count+=1
+//     }
+// }
+// console.log(count);
+
+
+
+
+
+
+
+
+// ================================================================
+// Unique chars
+
+// let chars = ['a', 'b', 'a', 'c', 'b']
+// let uniqueChars = []
+
+// for(let i=0; i<chars.length; i++){
+//     if(!uniqueChars.includes(chars[i])){
+//         uniqueChars.push(chars[i])
+//     }
+// }
+// console.log(uniqueChars);
+
+
+// CALLBACK METHOD
+let chars = ['a', 'b', 'a', 'c', 'b']
+
+let uniqueChars = chars.filter((char, index)=>{
+    return chars.indexOf(char) === index;
+})
+console.log(uniqueChars);
