@@ -108,21 +108,65 @@
 
 // Linear search
 
-let nums = [10, 13, 69, 45, 36, 76]
-let target = 69;
+// let nums = [10, 13, 69, 45, 36, 76]
+// let target = 69;
 
-for(let i=0; i<nums.length; i++){
-    if(nums[i] === target){
-        console.log(true);
+// for(let i=0; i<nums.length; i++){
+//     if(nums[i] === target){
+//         console.log(true);
+//     }
+// }
+
+// function findTarget(nums, target){
+//     for(let i=0; i<nums.length; i++){
+//         if(nums[i] === target){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// console.log(findTarget(nums, target));
+
+
+
+
+
+
+// Binary search
+// let nums = [10, 13, 69, 45, 36, 76].sort();
+// let target = 69;
+// let start = 0;
+// let end = nums.length - 1;
+
+// while(start <= end){
+//     let middle = Math.floor(start + end / 2);
+//     if(nums[middle] == target){
+//         console.log(nums[middle]);
+//         start+=1
+//         end-=1
+//     }else if(nums[middle] < target){
+//         start = middle + 1
+//     }else{
+//         end = middle -1
+//     }
+// }
+
+
+
+
+
+
+
+//=================================================================
+// Frequencey (how many times word is used)
+
+let words = 'hdsvgiuefgaugbvajkbvjkabeig';
+let target = 'd';
+let count = 0;
+
+for(let i=0; i<words.length; i++){
+    if(words[i] == target){
+        count++
     }
 }
-
-function findTarget(nums, target){
-    for(let i=0; i<nums.length; i++){
-        if(nums[i] === target){
-            return true;
-        }
-    }
-    return false;
-}
-console.log(findTarget(nums, target));
+console.log(count);
