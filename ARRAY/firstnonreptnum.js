@@ -201,10 +201,42 @@
 // console.log(uniqueChars);
 
 
-// CALLBACK METHOD
-let chars = ['a', 'b', 'a', 'c', 'b']
+// CALLBACK METHOD (unique array)
+// let chars = ['a', 'b', 'a', 'c', 'b']
 
-let uniqueChars = chars.filter((char, index)=>{
-    return chars.indexOf(char) === index;
-})
-console.log(uniqueChars);
+// let uniqueChars = chars.filter((char, index)=>{
+//     return chars.indexOf(char) === index;
+// })
+// console.log(uniqueChars);
+
+
+// Duplicates
+// let chars = ['a', 'b', 'a', 'c', 'b']
+
+// let uniqueChars = chars.filter((char, index)=>{
+//     return chars.indexOf(char) !== index;
+// })
+// console.log(uniqueChars);
+
+
+
+
+
+
+// ================================================================
+// sort by keys
+
+let obj = {
+    name: 'satya',
+    age: '23',
+    country: 'india'
+}
+
+let newObj = Object.keys(obj).sort();
+
+let newObjKeys = {};
+
+for (let key of newObj){
+   newObjKeys[key] = obj[key]
+}
+console.log(newObjKeys);
