@@ -226,17 +226,67 @@
 // ================================================================
 // sort by keys
 
-let obj = {
-    name: 'satya',
-    age: '23',
-    country: 'india'
-}
+// let obj = {
+//     name: 'satya',
+//     age: '23',
+//     country: 'india'
+// }
 
-let newObj = Object.keys(obj).sort();
+// let newObj = Object.keys(obj).sort();
 
-let newObjKeys = {};
+// let newObjKeys = {};
 
-for (let key of newObj){
-   newObjKeys[key] = obj[key]
-}
-console.log(newObjKeys);
+// for (let key of newObj){
+//    newObjKeys[key] = obj[key]
+// }
+// console.log(newObjKeys);
+
+
+
+
+
+
+// var removeElement = function(nums, val) {
+//     for(let i=0; i<nums.length; i++){
+//         if(nums[i] == val){
+//             nums.splice(i, 1)
+//             i--;
+//         }
+//     }
+//     return nums;
+// };
+// console.log(removeElement([0,1,2,2,3,0,4,2],2));
+
+
+
+
+
+// var plusOne = function(digits) {
+//    digits = digits.join('')
+//    digits = parseInt(digits)
+//    digits = digits+1;
+//    let newDigits = digits.split()
+//    return newDigits;
+// };
+// console.log(plusOne([1,2,3]));
+
+
+
+// var merge = function(nums1, m, nums2, n) {
+//    let newNums = nums1.concat(nums2).sort()
+//    return newNums;
+// };
+// console.log(merge([1,2,3,0,0,0],3,[2,5,6],3));
+
+
+
+
+// function outer(){
+//    let count = 1;
+//    return function inner(){
+//       count++;
+//       return count;
+//    }
+
+// }
+// console.log(outer()); 
