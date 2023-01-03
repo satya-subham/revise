@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Let's start with Grid</h1>
+    <!-- <h1>Let's start with Grid</h1>
     <div class="container">
         <div class="item item1">1</div>
         <div class="item item2">2</div>
@@ -31,6 +31,37 @@
         <li>banana</li>
     </ol>
 
-    <a href="tel:`${input.value}`">call us</a>
+    <a href="tel:`${input.value}`">call us</a> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DECOUNCING -->
+    <h1>Debouncing and throttling</h1>
+    <input type="text" onkeyup="getData()">
 </body>
+<script>
+    
+    function fetch() {
+        let timer;
+        let count = 1;
+        return function (){
+            clearTimeout(timer)
+            timer = setTimeout(()=>{
+            console.log("fetching data", count++);
+            }, 3000);
+            return count;
+
+        }
+    }
+    let getData = fetch();
+</script>
 </html>

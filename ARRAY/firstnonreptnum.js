@@ -21,8 +21,6 @@
 //     }
 // }
 
-
-
 // =================================================================
 
 // first non repeating numbers (if you don't add break it will print all non repeating number)
@@ -33,8 +31,6 @@
 //         break;
 //     }
 // }
-
-
 
 // non repeatnig numbers (if don't use break it will print all non repeating numbers)
 
@@ -67,8 +63,6 @@
 // }
 // console.log(max);
 
-
-
 // ================================================================
 // square of array
 
@@ -76,12 +70,9 @@
 // let newNums = []
 // for (let i = 0; i < nums.length; i++) {
 //     newNums.push(nums[i]**2)
-    
+
 // }
 // console.log(newNums);
-
-
-
 
 // =================================================================
 // remove false value
@@ -92,16 +83,9 @@
 
 // console.log(truthValue);
 
-
 // let arr = [1, 2, 3, 4];
 // let str = "1,2,3";
 // console.log(arr == str);
-
-
-
-
-
-
 
 // ================================================================
 // shorting alogiridoms
@@ -127,11 +111,6 @@
 // }
 // console.log(findTarget(nums, target));
 
-
-
-
-
-
 // Binary search
 // let nums = [10, 13, 69, 45, 36, 76].sort();
 // let target = 69;
@@ -150,12 +129,6 @@
 //         end = middle -1
 //     }
 // }
-
-
-
-
-
-
 
 //=================================================================
 // Anagram
@@ -180,13 +153,6 @@
 // }
 // console.log(count);
 
-
-
-
-
-
-
-
 // ================================================================
 // Unique chars
 
@@ -200,7 +166,6 @@
 // }
 // console.log(uniqueChars);
 
-
 // CALLBACK METHOD (unique array)
 // let chars = ['a', 'b', 'a', 'c', 'b']
 
@@ -209,7 +174,6 @@
 // })
 // console.log(uniqueChars);
 
-
 // Duplicates
 // let chars = ['a', 'b', 'a', 'c', 'b']
 
@@ -217,11 +181,6 @@
 //     return chars.indexOf(char) !== index;
 // })
 // console.log(uniqueChars);
-
-
-
-
-
 
 // ================================================================
 // sort by keys
@@ -241,11 +200,6 @@
 // }
 // console.log(newObjKeys);
 
-
-
-
-
-
 // var removeElement = function(nums, val) {
 //     for(let i=0; i<nums.length; i++){
 //         if(nums[i] == val){
@@ -257,10 +211,6 @@
 // };
 // console.log(removeElement([0,1,2,2,3,0,4,2],2));
 
-
-
-
-
 // var plusOne = function(digits) {
 //    digits = digits.join('')
 //    digits = parseInt(digits)
@@ -270,16 +220,11 @@
 // };
 // console.log(plusOne([1,2,3]));
 
-
-
 // var merge = function(nums1, m, nums2, n) {
 //    let newNums = nums1.concat(nums2).sort()
 //    return newNums;
 // };
 // console.log(merge([1,2,3,0,0,0],3,[2,5,6],3));
-
-
-
 
 // function outer(){
 //    let count = 1;
@@ -289,4 +234,19 @@
 //    }
 
 // }
-// console.log(outer()); 
+// console.log(outer());
+
+function sort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + i];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+let result = sort([-2, 1, 9, 4, -20]);
+console.log(result);
