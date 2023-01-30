@@ -55,24 +55,11 @@
 
 
 
-let promise = new Promise(resolve => {
-    setTimeout(() => resolve("done!"), 1000);
-  });
+// let promise = new Promise(resolve => {
+//     setTimeout(() => resolve("done!"), 1000);
+//   });
   
- promise.then(result => console.log(result)); 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  promise.then(result => console.log(result)); 
 
 
 
@@ -117,3 +104,165 @@ let promise = new Promise(resolve => {
 //   }
   
 //   asyncCall();
+
+
+
+
+
+
+
+
+
+
+
+
+// enter to atm
+// wellcome
+// punching card 2sec
+// entering pin 5sec
+// processing 7sec
+//collect cash 2sec
+// remove card 2sec
+// thank you 
+
+// function enterToAtm(){
+//   return new Promise((resolve, reject) => {
+//     resolve('enter to atm');
+//   })
+// }
+// function wellcome(){
+//   return new Promise((resolve, reject) => {
+//     resolve('wellcome');
+//   });
+// }
+// function punchingCard(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//     resolve('punching card')
+//     }, 2000)
+//   })
+// }
+// function enterPin(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       resolve('enter pin');
+//     }, 5000)
+//   })
+// }
+// function processing(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       resolve('processing');
+//     }, 7000)
+//   });
+// }
+
+// function collectCash(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       resolve('collect cash')
+//     }, 2000)
+//   });
+
+// }
+// function removeCard(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       resolve('remove card');
+//     }, 2000)
+//   })
+// }
+// function thankYou(){
+//   return new Promise((resolve,reject)=>{
+//     console.log('thank you');
+//   })
+// }
+
+// enterToAtm().then((Response)=>{
+//   console.log(Response)
+//   return wellcome()
+// }).then((Response)=>{
+//   console.log(Response)
+//   return punchingCard()
+// }).then((Response)=>{
+//   console.log(Response)
+//   return enterPin()
+// }).then((Response)=>{
+//   console.log(Response)
+//   return processing()
+// }).then((Response)=>{
+//   console.log(Response)
+//     return collectCash()
+// }).then((Response)=>{
+//   console.log(Response)
+//   return removeCard()
+// }).then((Response)=>{
+//   console.log(Response)
+//   return thankYou()
+// }).then((Response)=>{
+//   console.log(Response)
+// })
+
+
+// async function result(){
+//   console.log(await enterToAtm())
+//   console.log(await wellcome())
+//   console.log(await punchingCard())
+//   console.log(await enterPin())
+//   console.log(await processing())
+//   console.log(await collectCash())
+//   console.log(await removeCard())
+//   console.log(await thankYou())
+
+// }
+
+
+
+
+
+
+
+
+let enterToAtm = new Promise((resolve, reject) => {
+ resolve('enter to atm');
+})
+let wellcome = new Promise((resolve, reject) => {
+  resolve('wellcome');
+})
+let punchingCard = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve('punching card')
+  }, 2000)
+})
+let enterPin = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve('enter pin')
+  }, 5000)
+})
+let processing = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve('processing')
+  }, 2000)
+})
+let collectCash = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    reject('cash not available')
+  }, 2000)
+})
+let removeCard = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve('remove card')
+  }, 2000)
+})
+let thankYou = new Promise((resolve,reject)=>{
+  resolve('thank you')
+})
+
+function result(){
+  Promise.all([enterToAtm,wellcome,punchingCard,enterPin,processing,collectCash,removeCard,thankYou]).then((response)=>{
+    console.log(response);
+  }).catch((error)=>{
+    console.log(error);
+  })
+}
+result()
