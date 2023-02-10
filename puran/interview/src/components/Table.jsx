@@ -3,7 +3,6 @@ import axios from "axios";
 
 export function Table() {
   const [data, setData] = useState([]);
-  const [showData, setShowData] = useState([]);
   useEffect(() => {
     axios.get("/data.json").then((response) => {
       setData(response.data.results);
@@ -18,29 +17,12 @@ export function Table() {
   //   }, [showData])
 
   const sortData = () => {
-    // let filteredData = data.sort((a, b)=>{
-    //     return a - b;
-    // })
-    // console.log(filteredData)
-    // setShowData(filteredData)
-
-    let arr = [];
-    let filterData = data.map((item) => {
-      for (let key in item) {
-        console.log(key);
-        if (key == "Population") {
-          arr.push(item[key]);
-        }
-      }
-
-      arr.sort((a, b)=>{
-        return a - b 
-      })
-    });
-    setShowData(filterData)
-    console.log(arr);
-    console.log(filterData)
+    let newData = data.sort((a, b)=>{
+        return a.Population - b.Population;
+    })
+    setData([...newData])
   };
+
   return (
     <>
       <table>
