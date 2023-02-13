@@ -9,13 +9,6 @@ export function Table() {
     });
   }, []);
 
-  //   useEffect(()=>{
-  //   let sortData = data.sort((a, b)=> {
-  //     return a - b
-  //   })
-  //   setShowData(sortData)
-  //   }, [showData])
-
   const sortData = () => {
     let newData = data.sort((a, b)=>{
         return a.Population - b.Population;
